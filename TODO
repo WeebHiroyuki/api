@@ -1,0 +1,56 @@
+EMOJI ENDPOINTS
+-------------------------
+GET /v1/emoji/name/:emoji
+GET /v1/emoji/shortcodes/:emoji
+GET /v1/emoji/image/apple/:emoji
+GET /v1/emoji/image/google/:emoji
+GET /v1/emoji/image/samsung/:emoji
+GET /v1/emoji/image/microsoft/:emoji
+GET /v1/emoji/image/whatsapp/:emoji
+GET /v1/emoji/image/twiiter/:emoji
+GET /v1/emoji/image/facebook/:emoji
+GET /v1/emoji/image/joypixels/:emoji
+GET /v1/emoji/image/openmoji/:emoji
+GET /v1/emoji/image/emojidex/:emoji
+GET /v1/emoji/image/messenger/:emoji
+GET /v1/emoji/image/lg/:emoji
+GET /v1/emoji/image/htc/:emoji
+GET /v1/emoji/image/mozilla/:emoji
+GET /v1/emoji/image/softbank/:emoji
+GET /v1/emoji/image/docomo/:emoji
+
+TTS ENDPOINTS
+--------------------------
+GET /v1/tts/synthesize/:voice?text=:text
+GET /v1/tts/voiceinfo/:voice
+GET /v1/tts/voices
+
+INNERTUBE SIMPLIFIED ENDPOINTS
+--------------------------
+TODO
+
+https://github.com/tombulled/innertube
+
+CONVERSION ENDPOINTS
+--------------------------
+TODO
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+# add google translate voices - https://gitlab.libraryofcode.org/engineering/community-relations/backend/-/blob/master/src/commands/tts.ts
+
+# hash base 64 and cache it in tempfile
+
+# ----------------------example schema----------------------------------
+
+# "": { - Name of the TTS voice (for display purposes, doesn't need to match up with backend name)
+#     "languageCode": "", - Language code
+#     "languageName": "", - Nice looking name of the language
+#     "gender": "", - Gender of the voice
+#     "provider": "", - Who made the TTS?
+#     "limit": Integer - Charater limit of voice (1000 is put when it's > 1000)
+#     "quality": "", - Vocal quality of voice (High/Medium/Low)
+#     "translates": Boolean, - Does the TTS translate to the language that it's supposed to be?
+#     "url": "", - The direct URL to the TTS with {text} as the text to be spoken.
+#  }
