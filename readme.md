@@ -1,0 +1,1 @@
+i found something else i want to do, so im putting this on hold for now

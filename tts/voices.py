@@ -2240,22 +2240,3 @@ voices = {
         "url": "https://api.streamelements.com/kappa/v2/speech?voice=Naayf&text={text}",
     },
 }
-
-# add google translate voices - https://gitlab.libraryofcode.org/engineering/community-relations/backend/-/blob/master/src/commands/tts.ts
-
-# hash base 64 and cache it in tempfile
-
-# return array of links not just 1
-
-# ----------------------example schema----------------------------------
-
-# "": { - Name of the TTS voice (for display purposes, doesn't need to match up with backend name)
-#     "languageCode": "", - Language code
-#     "languageName": "", - Nice looking name of the language
-#     "gender": "", - Gender of the voice
-#     "provider": "", - Who made the TTS?
-#     "limit": Integer - Charater limit of voice (1000 is put when it's > 1000)
-#     "quality": "", - Vocal quality of voice (High/Medium/Low)
-#     "translates": Boolean, - Does the TTS translate to the language that it's supposed to be?
-#     "url": "", - The direct URL to the TTS with {text} as the text to be spoken.
-#  }

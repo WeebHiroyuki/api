@@ -1,8 +1,8 @@
 from fastapi import FastAPI
+from emoji import emoji
 
-app = FastAPI()
+router = FastAPI()
 
-
-@app.get("/")
-def read_root():
-    return "Bestie WYD?"
+@router.get("/")
+def describe():
+    return {"message": "This API is still in development and is nowhere near ready, please come back later."}
