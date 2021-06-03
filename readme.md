@@ -1,6 +1,6 @@
 # kaogurai's api
 
-```bash
+```
 git clone https://github.com/kaogurai/api
 cd api
 pip install -r requirements.txt
