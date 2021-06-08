@@ -1,0 +1,43 @@
+{
+    "playlistAuthor": "",
+    "playlistName": "",
+    "playlistURL": "",
+    "playlistCover": {
+        "png": "",
+        "jpg": "",
+        "webp": "",
+        "gif": ""
+    },
+    "playlistID": "",
+    "trackCount": 0,
+    "tracks": [
+        {
+            "trackNumber": 1,
+            "trackID": 1559931886,
+            "trackName": "",
+            "artists": [
+                {
+                    "name": "",
+                    "url": "",
+                    "artwork": {
+                        "png": "",
+                        "jpg": "",
+                        "webp": "",
+                        "gif": ""
+                    }
+                }
+            ],
+            "audioPreviews": [
+                {
+                    "url": ""
+                }
+            ],
+            "artwork": {
+                "png": "",
+                "jpg": "",
+                "webp": "",
+                "gif": ""
+            }
+        }
+    ]
+}

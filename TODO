@@ -25,32 +25,11 @@ GET /v1/tts/synthesize/:voice?text=:text
 GET /v1/tts/voiceinfo/:voice
 GET /v1/tts/voices
 
-INNERTUBE SIMPLIFIED ENDPOINTS
+APPLE MUSIC ENDPOINTS
 --------------------------
-TODO
-
-https://github.com/tombulled/innertube
-
-CONVERSION ENDPOINTS
---------------------------
-TODO
+GET /v1/music/applemusic/playlist/:url
 
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 # add google translate voices - https://gitlab.libraryofcode.org/engineering/community-relations/backend/-/blob/master/src/commands/tts.ts
-
-# hash base 64 and cache it in tempfile
-
-# ----------------------example schema----------------------------------
-
-# "": { - Name of the TTS voice (for display purposes, doesn't need to match up with backend name)
-#     "languageCode": "", - Language code
-#     "languageName": "", - Nice looking name of the language
-#     "gender": "", - Gender of the voice
-#     "provider": "", - Who made the TTS?
-#     "limit": Integer - Charater limit of voice (1000 is put when it's > 1000)
-#     "quality": "", - Vocal quality of voice (High/Medium/Low)
-#     "translates": Boolean, - Does the TTS translate to the language that it's supposed to be?
-#     "url": "", - The direct URL to the TTS with {text} as the text to be spoken.
-#  }
