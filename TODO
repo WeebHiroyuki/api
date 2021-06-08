@@ -27,9 +27,9 @@ GET /v1/tts/voices
 
 APPLE MUSIC ENDPOINTS
 --------------------------
-GET /v1/music/applemusic/playlist/:url
+GET /v1/music/applemusic/playlist/:id
 
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------
-# add google translate voices - https://gitlab.libraryofcode.org/engineering/community-relations/backend/-/blob/master/src/commands/tts.ts
+# add google translate voices to tts - https://gitlab.libraryofcode.org/engineering/community-relations/backend/-/blob/master/src/commands/tts.ts
