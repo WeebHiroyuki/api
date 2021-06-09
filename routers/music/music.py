@@ -1,9 +1,14 @@
+import aiohttp
 from fastapi import APIRouter
 
-router = APIRouter(prefix="/music", tags=["music"],)
+router = APIRouter(
+    prefix="/music",
+    tags=["music"],
+)
+
 
 @router.get("/")
-def describe():
-    return {
-        "message": "Music Endpoints"
-    }
+async def root():
+    session = aiohttp.ClientSession()
+    async with session.get("https://google.com") as request:
+        return request.status
