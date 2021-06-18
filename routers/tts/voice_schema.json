@@ -6,7 +6,7 @@
         "provider": "",
         "limit": 0,
         "quality": "",
-        "translates": "Boolean",
+        "translates": false,
         "url": ""
     }
 }
