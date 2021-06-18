@@ -8,4 +8,4 @@ router = APIRouter(
 
 @router.get("/")
 def root():
-    return {"message": "Emoji Endpoints"}
+    return {"detail": "This is the base URL for the emoji endpoints. Check the documentation for more information."}

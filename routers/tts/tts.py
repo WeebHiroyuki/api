@@ -8,4 +8,4 @@ router = APIRouter(
 
 @router.get("/")
 def root():
-    return {"detail": "TTS Endpoints"}
+    return {"detail": "This is the base URL for the TTS endpoints. Check the documentation for more information."}
