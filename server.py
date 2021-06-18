@@ -16,5 +16,5 @@ app.include_router(music.router)
 @app.get("/")
 def root():
     return {
-        "message": "This API is still in development and is nowhere near ready, please come back later."
+        "detail": "This API is still in development and is nowhere near ready, please come back later."
     }

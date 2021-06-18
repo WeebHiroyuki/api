@@ -8,4 +8,4 @@ router = APIRouter(
 
 @router.get("/")
 def root():
-    return {"message": "TTS Endpoints"}
+    return {"detail": "TTS Endpoints"}
