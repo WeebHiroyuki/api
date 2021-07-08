@@ -5,8 +5,5 @@ modules:
     enabled: true
   tts: 
     enabled: true
-    nanotts:
-      enabled: false
-      nanottsurl: 
 general:
   ipv6block:
