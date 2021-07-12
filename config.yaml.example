@@ -1,0 +1,9 @@
+modules:
+  emoji: 
+    enabled: true
+  music: 
+    enabled: true
+  tts: 
+    enabled: true
+general:
+  ipv6block:

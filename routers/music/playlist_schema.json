@@ -1,5 +1,8 @@
 {
-    "playlistAuthor": "",
+    "playlistAuthor": {
+        "name": "",
+        "displayname": ""
+    },
     "playlistName": "",
     "playlistURL": "",
     "playlistCover": {
@@ -25,11 +28,6 @@
                         "webp": "",
                         "gif": ""
                     }
-                }
-            ],
-            "audioPreviews": [
-                {
-                    "url": ""
                 }
             ],
             "artwork": {

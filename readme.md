@@ -6,6 +6,6 @@ cd api
 python3.8 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-mv config.yml.example config.yml
+mv config.yaml.example config.yaml
 hypercorn server:app
 ```

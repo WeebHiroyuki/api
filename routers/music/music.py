@@ -73,12 +73,12 @@ async def apple_music_album(name: str, album_id: str, country: str = "us"):
     return json_data
 
 
-@router.get("/applemusic/album/")
+@router.get("/applemusic/track/")
 async def apple_music_track(
     name: str, album_id: str, track_id: str, country: str = "us"
 ):
     """
-    Get JSON data about an apple music album.
+    Get JSON data about an apple music track.
     """
     url = (
         "https://music.apple.com/"
