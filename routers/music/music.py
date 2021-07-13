@@ -199,6 +199,7 @@ def reformat_album(text):
 
 
 def fetch_track_from_album(text, track_id):
+    newtrack = None
     for track in text["tracks"]:
         if track["trackID"] == track_id:
             newtrack = track
