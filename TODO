@@ -23,9 +23,3 @@ TTS ENDPOINTS
 --------------------------
 GET /v1/tts/synthesize/:voice?text=:text
 GET /v1/tts/voices
-
-APPLE MUSIC ENDPOINTS
---------------------------
-GET /v1/music/applemusic/playlist/
-GET /v1/music/applemusic/album/
-GET /v1/music/applemusic/track/
