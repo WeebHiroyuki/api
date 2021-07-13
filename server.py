@@ -19,10 +19,8 @@ if config["modules"]["music"]["enabled"]:
     app.include_router(music.router)
 
 if config["general"]["sentry"]:
-    sentry_sdk.init(
-        config["general"]["sentry"],
-        traces_sample_rate=1.0
-    )
+    sentry_sdk.init(config["general"]["sentry"], traces_sample_rate=1.0)
+
 
 @app.get("/")
 def root():
