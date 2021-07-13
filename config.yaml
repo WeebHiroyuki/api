@@ -1,9 +1,10 @@
 modules:
   emoji: 
-    enabled: true
+    enabled: false
   music: 
     enabled: true
   tts: 
-    enabled: true
+    enabled: false
 general:
   ipv6block:
+  sentry: https://0d84d5c3475b41aab5e3c7f455aac07d@o437819.ingest.sentry.io/5863479

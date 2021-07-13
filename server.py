@@ -1,4 +1,4 @@
-import aiohttp
+import sentry_sdk
 import yaml
 from fastapi import FastAPI
 
@@ -18,9 +18,14 @@ if config["modules"]["tts"]["enabled"]:
 if config["modules"]["music"]["enabled"]:
     app.include_router(music.router)
 
+if config["general"]["sentry"]:
+    sentry_sdk.init(
+        config["general"]["sentry"],
+        traces_sample_rate=1.0
+    )
 
 @app.get("/")
 def root():
     return {
-        "detail": "This API is still in development and is nowhere near ready, please come back later."
+        "message": "This is the base url for this API. Check out the documentation for more information."
     }

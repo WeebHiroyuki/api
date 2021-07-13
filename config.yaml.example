@@ -1,9 +1,10 @@
 modules:
   emoji: 
-    enabled: true
+    enabled: false
   music: 
     enabled: true
   tts: 
-    enabled: true
+    enabled: false
 general:
   ipv6block:
+  sentry:

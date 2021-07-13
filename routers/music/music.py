@@ -6,14 +6,14 @@ from fastapi import APIRouter, HTTPException
 
 router = APIRouter(
     prefix="/music",
-    tags=["music"],
+    tags=["music", "apple-music"],
 )
 
 
 @router.get("/")
 async def root():
     return {
-        "detail": "This is the base URL for the music endpoints. Check the documentation for more information."
+        "message": "This is the base URL for the music endpoints. Check the documentation for more information."
     }
 
 
@@ -235,7 +235,7 @@ async def apple_music_playlist(playlist_id: str, country: str = "us"):
     )
     results = await get_initial_apple_music_data(url)
     if results is None:
-        raise HTTPException(status_code=404, detail="Playlist not found.")
+        raise HTTPException(status_code=404, message="Playlist not found.")
     beautified = beautify_playlist(results)
     reformatted = reformat_playlist(beautified)
     return reformatted
@@ -260,7 +260,7 @@ async def apple_music_album(album_id: str, country: str = "us"):
     url = "https://music.apple.com/" + country + "/album/" + "kao" + "/" + album_id
     results = await get_initial_apple_music_data(url)
     if results is None:
-        raise HTTPException(status_code=404, detail="Album not found.")
+        raise HTTPException(status_code=404, message="Album not found.")
     beautified = beautify_album(results)
     reformatted = reformat_album(beautified)
     return reformatted
@@ -296,10 +296,10 @@ async def apple_music_track(album_id: str, track_id: str, country: str = "us"):
     )
     results = await get_initial_apple_music_data(url)
     if results is None:
-        raise HTTPException(status_code=404, detail="Track not found.")
+        raise HTTPException(status_code=404, message="Track not found.")
     beautified = beautify_album(results)
     reformatted = reformat_album(beautified)
     track = fetch_track_from_album(reformatted, track_id)
     if track is None:
-        raise HTTPException(status_code=404, detail="Track not found.")
+        raise HTTPException(status_code=404, message="Track not found.")
     return track
