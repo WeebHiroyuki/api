@@ -1,7 +1,8 @@
-import aiohttp
 import json
-from fastapi import APIRouter, HTTPException
+
+import aiohttp
 from bs4 import BeautifulSoup
+from fastapi import APIRouter, HTTPException
 
 router = APIRouter(
     prefix="/music",

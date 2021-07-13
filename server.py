@@ -1,6 +1,6 @@
 import aiohttp
-from fastapi import FastAPI
 import yaml
+from fastapi import FastAPI
 
 from routers.emoji import emoji
 from routers.music import music
