@@ -34,6 +34,8 @@ def unescape(text):
 def beautify_playlist(text):
     unescaped = unescape(text)
     remove_start = unescaped.split('2ccontributors":"')
+    if len(remove_start) == 1:
+        return
     remove_ending = remove_start[1].split('"}</script>')
     return remove_ending[0]
 
@@ -238,6 +240,8 @@ async def apple_music_playlist(playlist_id: str, country: str = "us"):
     if results is None:
         raise HTTPException(status_code=404, detail="Playlist not found.")
     beautified = beautify_playlist(results)
+    if beautified is None:
+        raise HTTPException(status_code=404, detail="Apple music didn't provide the JSON data, this is likely an invalid playlist.")
     reformatted = reformat_playlist(beautified)
     return reformatted
 
