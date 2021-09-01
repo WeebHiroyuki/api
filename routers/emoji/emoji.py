@@ -1,4 +1,4 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException
 from emojipedia import Emojipedia
 from constants import EMOJI_PROVIDERS
 
@@ -17,21 +17,15 @@ def root():
 @router.get("/:{emoji_name}")
 def resolve_emoji_url(emoji_name: str, provider: str):
     if emoji_name.startswith(":") or emoji_name.endswith(":"):
-        return {
-            "detail": "Please omit any colons from the ends of your emoji name."
-        }
+        raise HTTPException(status_code=400, detail="The ends of your emoji names should not be surrounded by colons.")
 
     if provider not in EMOJI_PROVIDERS:
-        return {
-            "detail": "Please specify a valid platform."
-        }
+        raise HTTPException(status_code=400, detail="Please specify a valid emoji provider.")
 
     emoji = Emojipedia.search(emoji_name)
 
     if emoji is None:
-        return {
-            "detail": f"The requested emoji ('{emoji_name}') could not be found."
-        }
+        raise HTTPException(status_code=404, detail=f"I couldn't find a valid emoji for '{emoji_name}.'")
 
     url: str = None
     for platform in emoji.platforms:
@@ -39,8 +33,6 @@ def resolve_emoji_url(emoji_name: str, provider: str):
             url = platform.image_url
 
     if url is None:
-        return {
-            "detail": f"I couldn't find a platform where the {emoji_name} emoji is available."
-        }
+        raise HTTPException(status_code=404, detail=f"I couldn't find an image URL for '{emoji_name}' on '{provider}.'")
 
     return { url }
